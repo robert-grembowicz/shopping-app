@@ -1,0 +1,29 @@
+.button {
+    background: #000;
+    border: 0;
+    color: rgba(#fff, 0.7);
+    padding: 10px 30px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color .2s;
+    &:hover {
+        background: rgba(#000, 0.8)
+    }
+}
+
+.buttonIcon {
+    position: relative;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+    }
+}

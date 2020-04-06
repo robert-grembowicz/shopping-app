@@ -1,0 +1,40 @@
+.listItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+    padding: 5px 20px 5px 5px;
+    background: #535353;
+    border-radius: 40px;
+}
+
+.listItemForm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    button {
+        margin-left: 20px;
+    }
+}
+
+.productName {
+    display: block;
+    margin-right: auto;
+}
+
+.quantityInput {
+    width: 30px;
+}
+
+.measure {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.measureInput {
+    width: 30px;
+}
