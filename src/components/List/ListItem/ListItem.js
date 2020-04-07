@@ -67,12 +67,12 @@ class ListItem extends React.Component {
                         }
 
                         { this.state.edited ?
-                            (<Button icon onClick={this.endEdit}>
+                            (<Button styleButton="icon" onClick={this.endEdit}>
                                 save
                                 <img src={check} />    
                             </Button>)
                             :
-                            (<Button icon onClick={this.startEdit}>
+                            (<Button styleButton="icon" onClick={this.startEdit}>
                                 <img src={settings} />  
                                 edit
                             </Button>)

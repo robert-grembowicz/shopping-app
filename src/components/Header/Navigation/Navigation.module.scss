@@ -11,9 +11,13 @@
     margin-right: 25px;
 }
 
-.navItemLink {
+.navItemLink, .navItemLinkDarkMode {
     color: rgba(#000, 0.6);
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
+}
+
+.navItemLinkDarkMode {
+    color: #fff;
 }

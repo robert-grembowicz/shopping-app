@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-const Button = ({children, icon, ...props}) => (
-    <button className={icon ? styles.buttonIcon : styles.button} {...props} >
-        {children}
-    </button>
-);
+const Button = ({children, styleButton, ...props}) => {
+    const buttonStyle = styleButton ? styles[styleButton] : styles.button;
+    return (
+        <button className={buttonStyle} {...props} >
+            {children}
+        </button>
+    );
+}
 
 export default Button;

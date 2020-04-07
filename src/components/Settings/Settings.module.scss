@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting {
+    margin-top: 30px;
+}
+
+.settingDesc {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.isDark {
+    color: #fff !important;
+}

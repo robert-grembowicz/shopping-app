@@ -17,7 +17,6 @@ class List extends React.Component {
 
         return (
             <>
-            { console.log(items) }
             { items ? (
                 <ul className={styles.wrapper}>
                     {items.map(item => (

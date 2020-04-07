@@ -12,7 +12,7 @@
     }
 }
 
-.buttonIcon {
+.icon {
     position: relative;
     font-size: 0;
     width: 30px;
@@ -26,4 +26,12 @@
         left: 0;
         width: 30px;
     }
+}
+
+.darkModeButton {
+    border: 2px solid green;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
 }
