@@ -16,7 +16,7 @@ class Root extends React.Component {
   state = {
 
     isModalOpen: false,
-    isDark: true,
+    isDark: localStorage.getItem('darkmode') ? JSON.parse(localStorage.getItem('darkmode')) : true,
     minimal: 2,
 
     categories: [
@@ -25,7 +25,7 @@ class Root extends React.Component {
         src: apple
       },
       {
-        name: 'sweets',
+        name: 'sweet',
         src: pie
       },
       {
@@ -34,36 +34,38 @@ class Root extends React.Component {
       }
     ],
 
-    products: [
-      // {
-      //   id: 0,
-      //   name: 'Apple',
-      //   quantity: 2,
-      //   measure: 'szt',
-      //   category: 'fruit'
-      // },
-      // {
-      //   id: 1,
-      //   name: 'pie',
-      //   quantity: 1,
-      //   measure: 'l',
-      //   category: 'sweets'
-      // },
-      // {
-      //   id: 2,
-      //   name: 'brandy',
-      //   quantity: 1,
-      //   measure: 'l',
-      //   category: 'alkohol'
-      // }
-    ]
+    products: localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : []
+
+    // products: [
+    //   {
+    //     id: 0,
+    //     name: 'Apple',
+    //     quantity: 2,
+    //     measure: 'szt',
+    //     category: 'fruit'
+    //   },
+    //   {
+    //     id: 1,
+    //     name: 'pie',
+    //     quantity: 1,
+    //     measure: 'l',
+    //     category: 'sweets'
+    //   },
+    //   {
+    //     id: 2,
+    //     name: 'brandy',
+    //     quantity: 1,
+    //     measure: 'l',
+    //     category: 'alkohol'
+    //   }
+    // ]
   }
 
   darkChange = () => {
     this.setState(prevState => ({
       isDark: !prevState['isDark']
-  }))
-  console.log(this.state.isDark);
+    }))
+    localStorage.setItem('darkmode', !this.state.isDark)
   }
 
   openModal = () => {
@@ -96,6 +98,8 @@ class Root extends React.Component {
 
     }))
 
+    localStorage.setItem("products", JSON.stringify(this.state.products));
+
   }
 
   addProduct = (e, item) => {
@@ -108,6 +112,8 @@ class Root extends React.Component {
         products: [...prevState['products'], newItem]
     }))
     this.closeModal();
+    localStorage.setItem("products", JSON.stringify(this.state.products));
+
   }
 
   minimalChange = (e) => {

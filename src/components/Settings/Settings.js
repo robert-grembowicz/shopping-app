@@ -26,7 +26,7 @@ class Settings extends React.Component {
                 <div className={styles.setting}>
                     <span className={styles.settingDesc}>Dark mode: </span>
                     <Button styleButton="darkModeButton" onClick={(e) => this.props.darkChange()}>
-                        dark
+                        {isDark ? 'deactive' : 'active' }
                     </Button>
                 </div>
             </div>
